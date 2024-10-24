@@ -6,6 +6,11 @@ import org.iesalandalus.programacion.damas.modelo.Direccion;
 import org.iesalandalus.programacion.damas.modelo.Dama;
 
 public class MainApp {
-	
+    public static void main(String[] args) {
+
+
+
+
+    }
 	
 }
