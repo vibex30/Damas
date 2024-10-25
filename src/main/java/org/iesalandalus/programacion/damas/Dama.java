@@ -44,15 +44,13 @@ public class Dama {
     }
 
 
-
-
-
-
-
-
-
     public void mover (Direccion direccion, int pasos){
+        if(direccion==null){
+            throw new NullPointerException("Error, la dirección no puede ser nula");
+        }
+        if(esDamaEspecial== false){
 
+        }
 
     }
 
@@ -79,4 +77,8 @@ public class Dama {
     return new Posicion(fila, columna);
     }
 
+    @Override
+    public String toString() {
+        return "Color" +color+ ", Posición"+ posicion;
+    }
 }
