@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.damas;
+package org.iesalandalus.programacion.damas.modelo;
 
 import java.util.Objects;
 
@@ -7,14 +7,14 @@ public class Posicion {
     private char columna;
 
 
-    public Posicion(int fila, char columna) {
+    public Posicion(int fila, char columna){
         setFila(fila);
         setColumna(columna);
     }
 
     public Posicion(Posicion posicion){
         if(posicion==null){
-            throw new NullPointerException("La posición no puede ser null.");
+            throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
         }
         setFila(posicion.getFila());
         setColumna(posicion.getColumna());
@@ -26,9 +26,9 @@ public class Posicion {
         return fila;
     }
 
-    private void setFila(int fila) {
+    private void setFila(int fila){
         if(fila<1 || fila >8){
-            throw new IllegalArgumentException("La fila no puede ser menor que 1 ni mayor que 8.");
+            throw new IllegalArgumentException("ERROR: Fila no válida.");
         }
 
         this.fila = fila;
@@ -40,9 +40,9 @@ public class Posicion {
 
 
 
-    private void setColumna(char columna) {
+    private void setColumna(char columna){
         if(columna<'a' ||columna>'h'){
-            throw new IllegalArgumentException("ERROR: Columna no válida.");
+            throw new IllegalArgumentException ("ERROR: Columna no válida.");
         }
 
         this.columna = columna;

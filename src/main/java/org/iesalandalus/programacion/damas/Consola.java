@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.damas;
 
+import org.iesalandalus.programacion.damas.modelo.Color;
+import org.iesalandalus.programacion.damas.modelo.Direccion;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -8,7 +10,6 @@ public class Consola {
     }
 
     public static void mostrarMenu(){
-        System.out.println("Bienvenido a el juego de las Damas, elija una opción:");
         System.out.println("1. Crear dama por defecto.");
         System.out.println("2. Crear dama eligiendo el color.");
         System.out.println("3. Mover.");
@@ -46,6 +47,7 @@ public class Consola {
         System.out.println("2. Sureste.");
         System.out.println("3. Noroeste.");
         System.out.println("4. Suroeste.");
+
 
     }
 
