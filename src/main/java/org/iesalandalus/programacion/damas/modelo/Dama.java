@@ -46,9 +46,14 @@ public class Dama {
         }
         this.posicion = posicion;
     }
+//Esto no está en el diagrama de clases
+    public boolean isEsDamaEspecial() {
+        return esDamaEspecial;
+    }
 
-
-
+    public void setEsDamaEspecial(boolean esDamaEspecial) {
+        this.esDamaEspecial = esDamaEspecial;
+    }
 
     public void mover (Direccion direccion, int pasos)throws OperationNotSupportedException{
         if(direccion==null){

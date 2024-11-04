@@ -1,8 +1,11 @@
 package org.iesalandalus.programacion.damas;
 
 import org.iesalandalus.programacion.damas.modelo.Color;
+import org.iesalandalus.programacion.damas.modelo.Dama;
 import org.iesalandalus.programacion.damas.modelo.Direccion;
 import org.iesalandalus.programacion.utilidades.Entrada;
+
+
 
 public class Consola {
     private Consola(){
@@ -73,6 +76,7 @@ public class Consola {
 
     public static void elegirPasos(){
         int numeroCasillasAMover;
+
         do{
             System.out.println("Introduce el número de casillas a desplazarse: ");
             numeroCasillasAMover=Entrada.entero();

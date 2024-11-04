@@ -54,22 +54,20 @@ public class MainApp {
 
 
     private static void mover(){
-        /*
-        System.out.println("1. Noreste.");
-        System.out.println("2. Sureste.");
-        System.out.println("3. Noroeste.");
-        System.out.println("4. Suroeste.");
-        int casillasAMover;
-
-        if(dama.isEsDamaEspecial()==true){
-            System.out.println("Cuántas casillas deseas mover?");
-            casillasAMover= Entrada.entero();
-            mover();
-        }*/
+        Consola.mostrarMenuDirecciones();
         try {
-            Consola.mostrarMenuDirecciones();
-            dama.mover(Consola.elegirDireccion(), 1);
-        }catch (IllegalArgumentException | NullPointerException|OperationNotSupportedException e){
+
+            int casillasAMover;
+            if(dama.isEsDamaEspecial()){
+                System.out.println("Ahora eres una dama especial");
+                System.out.println("¿Cuántas casillas deseas mover?");
+                casillasAMover= Entrada.entero();
+                dama.mover(Consola.elegirDireccion(), casillasAMover);
+
+            }else dama.mover(Consola.elegirDireccion(),1);
+
+
+        }catch (IllegalArgumentException | NullPointerException | OperationNotSupportedException e){
             System.out.println(e.getMessage());
         }
 
@@ -78,7 +76,7 @@ public class MainApp {
 
 
     private static void mostrarDama(){
-        System.out.println(dama);;
+        System.out.println(dama);
     }
 
 }
